@@ -1,0 +1,32 @@
+# Node modules
+node_modules/
+
+# Output directories
+dist/
+build/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Environment files
+.env
+.env.*  # in case you're using multiple envs (e.g., .env.dev)
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Editor directories
+.vscode/
+.idea/
+
+# Webpack output (optional)
+webpack-stats.json
+
+# Nodemon
+nodemon-debug.log
