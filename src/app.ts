@@ -1,6 +1,6 @@
 import { IncomingMessage, ServerResponse } from 'http';
 
-import { handleUsers } from './routes/users.ts';
+import { handleUsers } from './routes/users';
 
 export const appHandler = (req: IncomingMessage, res: ServerResponse) => {
   const { url = '', method } = req;

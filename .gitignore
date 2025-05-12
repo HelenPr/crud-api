@@ -14,8 +14,8 @@ npm-debug.log*
 *.tsbuildinfo
 
 # Environment files
-.env
-.env.*  # in case you're using multiple envs (e.g., .env.dev)
+# .env
+# .env.*
 
 # OS junk
 .DS_Store

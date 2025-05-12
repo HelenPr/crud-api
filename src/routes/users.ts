@@ -1,6 +1,5 @@
 import { IncomingMessage, ServerResponse } from 'http';
-import { getAllUsers, getUserById, createUser, updateUser, deleteUser } from '../controllers/usersController.ts';
-import { parse } from 'url';
+import { getAllUsers, getUserById, createUser, updateUser, deleteUser } from '../controllers/usersController';
 
 export const handleUsers = (req: IncomingMessage, res: ServerResponse) => {
   const urlParts = req.url?.split('/') || [];
@@ -14,7 +13,7 @@ export const handleUsers = (req: IncomingMessage, res: ServerResponse) => {
     if (method === 'PUT' && userId) return updateUser(req, res, userId);
     if (method === 'DELETE' && userId) return deleteUser(req, res, userId);
   }
-  
+
   res.writeHead(404, { 'Content-Type': 'application/json' });
   res.end(JSON.stringify({ message: 'Route not found' }));
 };

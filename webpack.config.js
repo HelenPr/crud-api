@@ -13,6 +13,8 @@ export default {
   output: {
     filename: 'server.mjs',
     path: path.resolve(__dirname, 'dist'),
+    module: true,
+    libraryTarget: 'module',
   },
   resolve: {
     extensions: ['.ts', '.js'],
@@ -20,7 +22,7 @@ export default {
       '.js': ['.js', '.ts'],
     },
     alias: {
-      '@': resolve(__dirname, 'src'),
+      '@': path.resolve(__dirname, 'src'),
     },
   },
   module: {
